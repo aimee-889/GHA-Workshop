@@ -1,4 +1,4 @@
-name: Container
+name: Using Containers
 on: [pull_request, push]
 
 jobs: 

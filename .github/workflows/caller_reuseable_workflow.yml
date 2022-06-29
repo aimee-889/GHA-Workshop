@@ -1,0 +1,16 @@
+  
+name: Calling a reuseable workflow
+on: push 
+jobs: 
+  greet-alice: 
+    uses: ./.github/reuseable-workflows/reuseable_workflow.yml
+    with:
+      username: Alice
+    secrets:
+      token: ${{ secrets.token }}
+  greet-john: 
+    uses: ./.github/reuseable-workflows/reuseable_workflow.yml
+    with:
+      username: John
+    secrets:
+      token: ${{ secrets.token }}

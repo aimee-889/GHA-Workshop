@@ -1,5 +1,4 @@
-name: Shell Commands 
-
+name: my first workflow
 on: [pull_request, push]
 
 jobs:

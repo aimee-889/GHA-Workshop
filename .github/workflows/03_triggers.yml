@@ -1,20 +1,21 @@
-name: Actions Workflow 
-
+name: Triggers
+# triggers
 on:
   push:
     branches:
       - master
-      - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
-      - "!feature/featc"
+      - "feature/**" # matches featur/A, feature/B, doesn't match feature/A/A
+      - "!feature/C" # excludes 
+    # 
     tags: 
       - v1.*
+    # based on what file paths are changed
     paths: 
-      - "**.js"
-      - "!filename.js"
+      - "**.yml"
+      - "!.yaml"
     # paths-ignore:
     # - 'docs/**'
-  # repository_dispatch:
-  #   types: [build]
+  repository_dispatch:
   # schedule:
   #   - cron: "0/5 * * * *"
   #   - cron: "0/6 * * * *" 
