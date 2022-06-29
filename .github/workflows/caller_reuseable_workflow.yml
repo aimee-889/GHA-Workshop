@@ -3,13 +3,13 @@ name: Calling a reuseable workflow
 on: push 
 jobs: 
   greet-alice: 
-    uses: ./.github/workflows/greeting.yml@master
+    uses: ./.github/workflows/greeting.yml
     with:
       username: Alice
     secrets:
       token: ${{ secrets.token }}
   greet-john: 
-    uses: ./.github/workflows/greeting.yml@master
+    uses: ./.github/workflows/greeting.yml
     with:
       username: John
     secrets:
