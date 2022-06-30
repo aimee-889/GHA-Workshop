@@ -1,13 +1,11 @@
-name: my first workflow
-on: [pull_request, push]
-
+name: My first workflow
+on: push
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps: 
       - name: echo a string
         run: echo "Hello World"
-        timeout-minutes: 0
       - name: multiline script 
         run: |
            node -v 
@@ -15,8 +13,7 @@ jobs:
       - name: python Command 
         run: |
           import platform 
-          print
-          (platform.processor())
+          print(platform.processor())
         shell: python
   run-windwos-commands:
     runs-on: windows-latest

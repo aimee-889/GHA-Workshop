@@ -1,9 +1,8 @@
 
 name: Using Envs
-on: [push]
+on: push
 env: 
   WF_ENV: Available to all jobs 
-
 jobs:
   log-set-envs-and-default-envs: 
     runs-on: ubuntu-latest

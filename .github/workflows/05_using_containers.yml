@@ -1,6 +1,5 @@
 name: Using Containers
-on: [pull_request, push]
-
+on: push
 jobs: 
   docker-steps:
     runs-on: ubuntu-latest
@@ -25,8 +24,3 @@ jobs:
         with:
           entrypoint: ./script.sh
           args: "Some string"
-      # - name: send a slack message
-      #   uses: docker://technosophos/slack-notify
-      #   env:
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-      #     SLACK_MESSAGE: "Hello slack"

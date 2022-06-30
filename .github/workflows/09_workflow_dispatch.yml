@@ -1,0 +1,13 @@
+name: Using a Workflow dispatch 
+on: 
+  workflow_dispatch:
+      inputs:
+        username:
+          description: 'Give a name whom you want to greet'
+          required: true
+jobs: 
+  greet-someone: 
+    uses: ./.github/workflows/greeting.yml
+    with:
+      username:  ${{ github.event.inputs.config_tag_name }}
+

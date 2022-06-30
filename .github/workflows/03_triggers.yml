@@ -1,12 +1,11 @@
-name: Triggers
-# triggers
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+name: Events that triggers workflow
 on:
   push:
     branches:
       - master
       - "feature/**" # matches featur/A, feature/B, doesn't match feature/A/A
       - "!feature/C" # excludes 
-    # 
     tags: 
       - v1.*
     # based on what file paths are changed
@@ -15,41 +14,16 @@ on:
       - "!.yaml"
     # paths-ignore:
     # - 'docs/**'
-  repository_dispatch:
+  workflow_dispatch:
   # schedule:
   #   - cron: "0/5 * * * *"
-  #   - cron: "0/6 * * * *" 
-  # push:
   # pull_request:
   #   types: [closed, assigned, opened, reopened]
 
 jobs: 
-  run-github-actions: 
+  say-hello: 
     runs-on: ubuntu-latest
     steps:
-      - name: playload
-        run: echo ${{ github.event.client_payload.env }}
-      - name: List Files 
+      - name: Say Hello 
         run: |
-          pwd
-          ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo "${{ github.token }}"
-          # git clone git@github:$GITHUB_REPOSITORY
-          # git checkout $GITHUB_SHA
-      - name: Checkout 
-        uses: actions/checkout@v1
-      - name: List Files After Checkout
-        run: |
-          pwd
-          ls -a
-      - name: Simple JS Action
-        id: greet 
-        uses: actions/hello-world-javascript-action@v1
-        with: 
-          who-to-greet: John
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
-
+          echo "Hello World"

@@ -10,15 +10,12 @@ on:
         required: true
 
 jobs:
-  example_job:
-    name: Pass input and secrets to my-action
+  greeting_job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 
         uses: actions/checkout@v1
-      - name: Greeting Action
-      # do i need this?
-        id: greet 
+      - name: Greeting Actiont 
         uses: actions/hello-world-javascript-action@v1
         with: 
           who-to-greet: ${{ inputs.username }}

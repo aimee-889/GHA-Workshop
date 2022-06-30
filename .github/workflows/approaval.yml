@@ -1,0 +1,8 @@
+name: My first workflow
+on: push
+jobs:
+  approve_job:
+    environment: dev_approve
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I received an approaval to run!"
