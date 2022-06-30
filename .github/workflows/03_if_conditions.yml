@@ -1,5 +1,5 @@
 name: If Conditions 
-on: [workflow_dispatch, push]
+on: [push, workflow_dispatch]
 env:
   DAY_OF_WEEK: Monday
 jobs:
