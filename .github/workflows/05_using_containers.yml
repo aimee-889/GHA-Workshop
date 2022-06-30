@@ -1,5 +1,5 @@
 name: Using Containers
-on: push
+on: workflow_dispatch
 jobs: 
   docker-steps:
     runs-on: ubuntu-latest

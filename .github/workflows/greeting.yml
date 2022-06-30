@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v1
-      - name: Greeting Actiont 
+      - name: Greeting Action
         uses: actions/hello-world-javascript-action@v1
         with: 
           who-to-greet: ${{ inputs.username }}

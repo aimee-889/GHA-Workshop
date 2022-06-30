@@ -1,5 +1,5 @@
 name: Using Actions 
-on: push
+on: workflow_dispatch
 jobs: 
   run-github-actions: 
     runs-on: ubuntu-latest

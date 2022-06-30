@@ -1,4 +1,4 @@
-name: Using a Workflow dispatch 
+name: Providing input to workflow_dispatch
 on: 
   workflow_dispatch:
       inputs:
@@ -9,5 +9,5 @@ jobs:
   greet-someone: 
     uses: ./.github/workflows/greeting.yml
     with:
-      username:  ${{ github.event.inputs.config_tag_name }}
+      username: ${{ github.event.inputs.username }}
 
