@@ -5,9 +5,8 @@ jobs:
   dev_approval:
     environment: dev_approve
     runs-on: ubuntu-latest
-     steps:
+    steps:
       - run: echo "Approval from Developers has been given"
-
   run_command:
     #environment: dev_approve
     needs: 
