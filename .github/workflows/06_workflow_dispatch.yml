@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
       inputs:
         username:
-          description: 'Give a name whom you want to greet'
+          description: 'Who do you want to greet?'
           required: true
 jobs: 
   greet-someone: 

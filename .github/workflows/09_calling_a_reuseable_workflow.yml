@@ -5,11 +5,7 @@ jobs:
     uses: ./.github/workflows/greeting.yml
     with:
       username: Alice
-    secrets:
-      token: ${{ secrets.token }}
   greet-john: 
     uses: ./.github/workflows/greeting.yml
     with:
       username: John
-    secrets:
-      token: ${{ secrets.token }}

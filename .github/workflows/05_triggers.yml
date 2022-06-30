@@ -24,6 +24,6 @@ jobs:
   say-hello: 
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello 
+      - name: Be triggered
         run: |
-          echo "Hello World"
+          echo "I have been triggered! This PC will destroy itself in 10..9..8..7..6..5..4..3..2..1 *bam*"

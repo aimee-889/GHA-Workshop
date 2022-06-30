@@ -1,6 +1,6 @@
 
 name: Using Envs
-on: workflow_dispatch
+on: push
 env: 
   WF_ENV: Available to all jobs 
 jobs:

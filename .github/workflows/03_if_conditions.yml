@@ -1,0 +1,16 @@
+name: If Conditions 
+on: [workflow_dispatch, push]
+env:
+  DAY_OF_WEEK: Monday
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
+    steps: 
+      - name: echo a string
+        if: ${{ env.DAY_OF_WEEK != 'Saturday' || env.DAY_OF_WEEK != 'Saturday' }}
+        run: echo "$Greeting World, it is a rainy $DAY_OF_WEEK"
+      - name: echo a string
+        if: ${{ env.DAY_OF_WEEK == 'Saturday' || env.DAY_OF_WEEK == 'Saturday' }}
+        run: echo "$Greeting World, it is a sunny $DAY_OF_WEEK!! *\^^/*"
