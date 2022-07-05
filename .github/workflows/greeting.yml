@@ -1,4 +1,4 @@
-name: Reusable workflow to greet someone
+name: RW greeting
 on:
   workflow_call:
     inputs:
